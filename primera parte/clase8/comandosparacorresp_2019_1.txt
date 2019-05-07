@@ -1,0 +1,51 @@
+#http://www.sthda.com/english/wiki/print.php?id=228
+install.packages("ca")
+install.packages("FactoMineR")
+install.packages("gplots")
+install.packages("graphics")
+install.packages("corrplot")
+library(ca)
+library(FactoMineR)
+library(gplots)
+library(graphics)
+library(factoextra)
+library(corrplot)
+
+
+datos<-read.csv(file=file.choose(),header=T,sep=';')
+
+dt <- as.table(as.matrix(datos))
+
+balloonplot(t(dt), main ="Profesores", xlab ="", ylab="",label = FALSE, show.margins = FALSE)
+
+mosaicplot(dt, shade = TRUE, las=2,main = "Profesores")
+
+res.ca <- CA(datos, graph = TRUE)
+summary(res.ca, nb.dec = 2, ncp = 2)
+eigenvalues <- get_eigenvalue(res.ca)
+
+fviz_screeplot(res.ca, addlabels = TRUE, ylim = c(0, 100))
+plot(res.ca)
+fviz_ca_biplot(res.ca)
+fviz_ca_biplot(res.ca, map ="colgreen", arrow = c(TRUE, FALSE))
+
+#Para visualizar sólo los renglones (preguntas)
+row <- get_ca_row(res.ca)
+row
+head(row$coord)
+fviz_ca_row(res.ca)
+head(row$contrib)
+
+#contribución por dimensión
+corrplot(row$contrib, is.corr=FALSE)
+#a la dimensión 1
+fviz_contrib(res.ca, choice = "row", axes = 1)
+#a la dimensión 2
+# Contributions of rows on Dim.2
+fviz_contrib(res.ca, choice = "row", axes = 2)
+# Total contribution on Dim.1 and Dim.2
+fviz_contrib(res.ca, choice = "row", axes = 1:2)
+
+
+
+

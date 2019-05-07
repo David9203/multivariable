@@ -1,0 +1,277 @@
+typeof(Data[,4])
+head(Data[,4])
+head(Data$gear_ratio)
+typeof(Data$gear_ratio)
+head(Data[,5])
+typeof(Data[,5])
+typeof(Data[,6])
+typeof(Data[,7])
+typeof(Data[,8])
+typeof(Data[,9])
+typeof(Data[,10])
+typeof(Data[,11])
+head(Data)
+Data[,3:length(Data)]
+values<-Data[,3:length(Data)]
+correlationanalisis(values)
+for(i in 1:length(values){#
+ 	a[i]=shapiro.test(values[,i]) }
+for(i in 1:length(values){#
+ 	a[i]=shapiro.test(values[,i]) #
+ 	}
+i=0#
+      for(i in 1:length(values){#
+ 	a[i]=shapiro.test(values[,i]) #
+ 	}
+for(i in 1:length(values){#
+ 	a[i]=shapiro.test(values[,i]) #
+ 	}
+values
+values[,1]
+values[,2]
+i=0#
+    for(i in 1:length(values){#
+ 	a[i]=shapiro.test(values[,i]) #
+ 	}
+for(i in 1:length(values){#
+ 	a[i]=shapiro.test(values[,i])
+shapiro.test(values[,1])
+shapiro.test(values[,2])
+shapiro.test(values[,3])
+shapiro.test(values[,4])
+shapiro.test(values[,5])
+shapiro.test(values[,6])
+shapiro.test(values[,7])
+shapiro.test(values[,8])
+shapiro.test(values[,9])
+shapiro.test(values[,10])
+powerTransform(values[,1])
+library(car)
+powerTransform(values[,1])
+powerTransform(values[,1])$x
+powerTransform(values[,1])$value
+boxcoxTransform(values[,1])
+library(envstats)
+library(EnvStats)
+boxcoxTransform(values[,1])
+powerTransform(values[,1])
+lam= -0.3533898
+powerTransform(values[,1],lam)
+boxcoxTransform(values[,1],lam)
+valu1=  boxcoxTransform(values[,1],lam)
+powerTransform(values[,2])
+shapiro.test(valu1)
+powerTransform(values[,2])
+lam=   0.6197182
+valu1=  boxcoxTransform(values[,2],lam)
+lam= -0.3533898
+valu1=  boxcoxTransform(values[,1],lam)
+shapiro.test(valu1)
+powerTransform(values[,2])
+valu2=  boxcoxTransform(values[,2],lam)
+shapiro.test(valu2)
+ks.test(valu2,pnorm)
+correlationanalisis(values)
+shapiro.test(values[,2])
+shapiro.test(log(values[,2]))
+powerTransform(values[,2])
+lam=   0.6197182
+valu2=  boxcoxTransform(values[,2],lam)
+shapiro.test(valu2)
+ks.test(valu2,pnorm)
+ks.test(valu2,pnorm,mean(valu2),sd(valu2))
+powerTransform(values[,3])
+lam= 0.8142939
+valu1=  boxcoxTransform(values[,3],lam)
+shapiro.test(valu2)
+shapiro.test(valu3)
+valu3=  boxcoxTransform(values[,3],lam)
+shapiro.test(valu3)
+shapiro.test(values[,4])
+shapiro.test(log(values[,4]))
+powerTransform(values[,4])
+lam=   0.5026624
+valu2=  boxcoxTransform(values[,2],lam)
+shapiro.test(valu2)
+valu4=  boxcoxTransform(values[,4],lam)
+shapiro.test(valu4)
+powerTransform(values[,4])
+ks.test(valu4,pnorm,mean(valu4),sd(valu4))
+shapiro.test(valu4)
+i=5
+shapiro.test(values[,i])
+i=6
+shapiro.test(values[,i])
+shapiro.test(log(values[,i]))
+powerTransform(values[,i])
+lam=     0.2986733
+valu6=  boxcoxTransform(values[,i],lam)
+shapiro.test(valu6)
+ks.test(valu6,pnorm,mean(valu6),sd(valu6))
+ks.test(values[,6],pnorm,mean(values[,6]),sd(values[,6]))
+i=7#
+ks.test(values[,i],pnorm,mean(values[,i]),sd(values[,i]))
+i=8#
+ks.test(values[,i],pnorm,mean(values[,i]),sd(values[,i]))
+i=9#
+ks.test(values[,i],pnorm,mean(values[,i]),sd(values[,i]))
+i=10#
+ks.test(values[,i],pnorm,mean(values[,i]),sd(values[,i]))
+i=7
+shapiro.test(values[,i])
+shapiro.test(log(values[,i]))
+powerTransform(values[,i])
+lam=    0.001216884
+valu7=  boxcoxTransform(values[,i],lam)
+shapiro.test(valu6)
+ks.test(valu7,pnorm,mean(valu7),sd(valu7))
+i=8
+shapiro.test(values[,i])
+shapiro.test(log(values[,i]))
+powerTransform(values[,i])
+lam=   0.09708738
+valu8=  boxcoxTransform(values[,i],lam)
+shapiro.test(valu8)
+ks.test(valu8,pnorm,mean(valu8),sd(valu8))
+shapiro.test(valu7)
+i=9
+shapiro.test(values[,i])
+shapiro.test(log(values[,i]))
+powerTransform(values[,i])
+lam=    0.7186669
+valu9=  boxcoxTransform(values[,i],lam)
+shapiro.test(valu9)
+ks.test(valu9,pnorm,mean(valu9),sd(valu9))
+valuesbox=data.frame(valu1,valu2,valu3,valu4,valu5,valu6,valu7,valu8,valu9)
+valu5=values[,5]
+valu5
+valuesbox=data.frame(valu1,valu2,valu3,valu4,valu5,valu6,valu7,valu8,valu9)
+valuesbox
+correlationanalisis(valuesbox)
+correlationanalisis(values)
+correlationanalisis(valuesbox)
+values[,1]
+values[,3]
+valu3=  boxcoxTransform(values[,3],lam)
+valu1=  boxcoxTransform(values[,1],lam)
+valu1
+valu2
+valuesbox=data.frame(valu1,valu2,valu3,valu4,valu5,valu6,valu7,valu8,valu9)
+correlationanalisis(valuesbox)
+correlationanalisis(valuesbox)
+summary(valuesbox)
+x=valuesbox
+for (i in 3:length(x)) {   ##transformar datos a datos positivos
+/
+for (i in 3:length(x)) {   ##transformar datos a datos positivos
+x[i] = (x[i]-min(x[i]))/(max(x[i])-min(x[i])).  #para poner todos los datos de 0 a 1
+for (i in 3:length(x)) {   ##transformar datos a datos positivos
+x[i] = (x[i]-min(x[i]))/(max(x[i])-min(x[i]))  #para poner todos los datos de 0 a 1
+}
+head(x)
+for (i in 3:length(x)) {   ##transformar datos a datos positivos #
+ #datos[i]=dates[i]-min(dates[i])  #para poner todos los datos positivos #
+ x[i] = (x[i]-min(x[i]))/(max(x[i])-min(x[i]))  #para poner todos los datos de 0 a 1 #
+  }
+head(x)
+x=valuesbox
+for (i in 1:length(x)) {   ##transformar datos a datos positivos #
+#datos[i]=dates[i]-min(dates[i])  #para poner todos los datos positivos #
+ x[i] = (x[i]-min(x[i]))/(max(x[i])-min(x[i]))  #para poner todos los datos de 0 a 1 #
+}
+head(x)
+summary(x)
+correlationanalisis(x)
+correlationanalisis(valuesbox)
+correlationanalisis(x)
+fit<-factanal(x,3,method="ml",scores="regression",rotation="varimax")
+fit
+scores<-fit$scores
+scores
+scree(x) ##grafico de codo para evaluar los datos que sirvan
+fa.parallel(x)
+library(Momocs)
+screeplot(x)
+library(factanal)#
+library(psy)#
+library(nFactors)#
+library(GPArotation)#
+library(Rgraphviz)#
+library(stats)
+x
+screeplot(x)
+screeplot(scores)
+fit<-factanal(x,3,method="ml",scores="regression",rotation="varimax")
+fit
+scores<-fit$scores
+screeplot(scores)
+scree.plot(fit$scores) #screeplot
+scree.plot(fit$correlation) #screeplot
+fa.parallel(x)
+price
+ks.test(price,pnorm,mean(price),sd(price))
+ks.test(log(price),pnorm,mean(log(price)),sd(log(price)))
+simple_mpg <- lm(log(price) ~ scores[,1])
+summary(simple_mpg)
+anova(simple_mpg)
+confint(simple_mpg)
+resid_mpg<-residuals(simple_mpg)
+par(mfrow = c(2, 2))
+par(mfrow = c(2, 2))
+plot(simple_mpg)
+plot(num, resid_mpg)
+summary(simple_mpg)
+reset(simple_mpg)
+bartlett.test(scores[,1])
+resid_def<-residuals(simple_mpg)
+num
+plot(num, resid_def)
+par(mfrow = c(2, 2))
+par(mfrow = c(2, 2))
+plot(def_regres)
+runs.test(resid_def)
+jb.norm.test(resid_def, nrepl=2000)
+cor(scores)
+simple_mpg <- lm(log(price) ~ scores[,1]+scores[,2]+scores[,3])
+summary(simple_mpg)
+shapiro.test(scores[,1])
+shapiro.test(log(scores[,1]))
+shapiro.test(scores[,1])
+powerTransform(scores[,1])
+powerTransform(scores[,1]+1)
+scores[,1]
+x=scores[,1]
+x= (x-min(x))/(max(x)-min(x))  #para poner todos los datos de 0 a 1
+x
+powerTransform(x)
+powerTransform(x+1)
+x=x+1
+powerTransform(x)
+valufit=  boxcoxTransform(x,1.702808)
+shapiro.test(valufit)
+shapiro.test(price)
+shapiro.test(log(price))
+powerTransform(price)
+valuprice=  boxcoxTransform(price,-1.436082)
+shapiro.test(valuprice)
+simple_mpg <- lm(valuprice ~ valufit)
+summary(simple_mpg)
+anova(simple_mpg)
+reset(simple_mpg)
+bartlett.test(valufit)
+x
+KMO(valuesbox)
+cortest.bartlett(valuesbox)
+resid_def<-residuals(simple_mpg)
+plot(num, resid_def)
+par(mfrow = c(2, 2))
+plot(def_regres)
+runs.test(resid_def)
+jb.norm.test(resid_def, nrepl=2000)
+anova(simple_mpg)
+summary(simple_mpg)
+write.csv(valuprice, file="/homework/price.csv",row.names=FALSE, sep='.')
+write.csv(valuprice, file="/Users/nesdav/Documents/estadisticamultivariada/segunda parte/regresion 2 clase/homework/price.csv",row.names=FALSE, sep='.')
+write.csv(valufit, file="/Users/nesdav/Documents/estadisticamultivariada/segunda parte/regresion 2 clase/homework/price.csv",row.names=FALSE, sep='.')
+write.csv(valuprice, file="/Users/nesdav/Documents/estadisticamultivariada/segunda parte/regresion 2 clase/homework/price.csv",row.names=FALSE, sep='.')
+write.csv(valufit, file="/Users/nesdav/Documents/estadisticamultivariada/segunda parte/regresion 2 clase/homework/valufit.csv",row.names=FALSE, sep='.')
