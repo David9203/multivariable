@@ -130,11 +130,17 @@ scores<-fit$scores
 scores
 cor(scores)
     
+res.pca <- prcomp(x, scale = TRUE)
+res.pca
+get_pca_var(res.pca)
+get_eig(res.pca) 
+    
+    
     
 ks.test(price,pnorm,mean(price),sd(price))
 ks.test(log(price),pnorm,mean(log(price)),sd(log(price)))
 
-simple_mpg <- lm(log(price) ~ scores[,1]) 
+simple_mpg <- lm(log(price) ~ scores[,1]+scores[,3]) 
 summary(simple_mpg)
 anova(simple_mpg)
 confint(simple_mpg)
@@ -144,30 +150,43 @@ reset(simple_mpg)
 
 2. #Homoscedasticidad
 x<-scores[,c(1:2)]
-bartlett.test(scores[,1])
+bartlett.test(x)
+
+white.test(x=scores[,1:2],y=log(price))
 
 #3. Autocorrelación: si es serie de tiempo dwtest(def_regres)
 resid_def<-residuals(simple_mpg)
+x<-resid_def[,c(1)]
 plot(num, resid_def)
 par(mfrow = c(2, 2))
 plot(def_regres)
+runs.test(x)
+
 runs.test(resid_def)
+
+install.packages("snpar") 
+library(snpar)
+ runs.test(x)
+
+
+
 
 #4. Normalidad de los residuales
 jb.norm.test(resid_def, nrepl=2000)
 
-x=scores[,1]
+x=scores[,1:2]
 x= (x-min(x))/(max(x)-min(x))  #para poner todos los datos de 0 a 1 
 x=x+1
   powerTransform(x)	
-valufit=  boxcoxTransform(x,1.702808) 
+valufit=  boxcoxTransform(x,1.5) 
+valufit=x
     shapiro.test(valufit)
 
   powerTransform(price)	
 valuprice=  boxcoxTransform(price,-1.436082) 
 shapiro.test(valuprice)
 
-simple_mpg <- lm(valuprice ~ valufit) 
+simple_mpg <- lm(valuprice ~ scores[,1]+scores[,3]) 
 summary(simple_mpg)
 anova(simple_mpg)
 confint(simple_mpg)

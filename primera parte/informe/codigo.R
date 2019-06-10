@@ -15,6 +15,16 @@ dim(datos)
 dates=datos
 x=dates
 
+
+
+rmscut= cut(RMS, breaks = 2, labels = c(0, 1))
+mcut= cut(M, breaks = 2, labels = c(0, 1))
+par(mfrow=c(2,2))
+ plot(mcut)
+ plot(rmscut)
+ plot(M)
+ plot(RMS)
+
 pie(table(datos$Transformación))
 library(car)
 scatterplotMatrix(datanum[,1:4],groups=datos$Transformación)

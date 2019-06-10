@@ -3,6 +3,12 @@ attach(datos)
 head(datos)
 dim(datos)
 
+i=15
+sd(datanum[,i], na.rm=TRUE)/ 
++    mean(datanum[,i], na.rm=TRUE)*100
+[1] 76.67039
+
+
 datanum<-read.csv(file=file.choose(),header=T,sep=';')
 attach(datanum)
 head(datanum)
